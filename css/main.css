@@ -104,6 +104,9 @@ p {
   font-weight: 700;
   color: #5d5d5d;
 }
+ul.nav a {
+  font-variant: small-caps;
+}
 .navbar-brand {
   width: 100%;
   margin: 0;
@@ -300,12 +303,34 @@ nav li a {
 }
 .field-name-field-ausstattung .field-label,
 .node-type-unit-description h2.pane-title,
-.page-node-6 h2.pane-title {
+.page-node-6 h2.pane-title, h2 {
   padding: .3em .5em;
   margin: 0 0 1em;
-  background: #5d5d5d;
-  color: #fff;
-  border-radius: 2px;
+  color: #000;
+  border-radius: 0px;
+  border-top: 1px solid #720201;
+  border-bottom: 1px solid #720201;
+  line-height: 1;
+  font-variant: small-caps;
+  text-align: center;
+  position: relative;
+}
+.node-type-unit-description .einzelansicht h2.pane-title {
+  margin: 0 1em 1em;
+}
+.field-name-field-ausstattung .field-label:before,
+.node-type-unit-description h2.pane-title:before,
+.page-node-6 h2.pane-title:before, h2:before {
+border-bottom: 1px solid #5D5D5D;
+    border-top: 1px solid #5D5D5D;
+    bottom: 2px;
+    content: " ";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 2px;
+    z-index: -1;
 }
 .page-node-6 ul {
   padding-left: .7em;
@@ -397,15 +422,36 @@ nav li a {
 }
 
 /* Tabellen */
-.table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {
-background-color: #EBE9E6;
+.table {
+  width: 93%;
+  margin: 0 auto 1em;
 }
-.table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
-border: 1px solid #ddd;
+.table p {
+  margin: 0;
+}
+tbody {
+  border: 0;
+}
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+  background-color: transparent;
+  padding: .5em 0;
+  line-height: 1;
+}
+.table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {
+background-color: transparent;
 }
 .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
   border: none;
+
+  padding: .5em 0;
+  line-height: 1;
+}
+.table-bordered>thead>tr, .table-bordered>tbody>tr, .table-bordered>tfoot>tr {
+  border-bottom: 1px solid #720201;
+}
+.table-bordered>tbody>tr:last-child, .table-bordered>tfoot>tr:last-child {
+  border-bottom: none;
 }
 .table-hover>tbody>tr:hover>td, .table-hover>tbody>tr:hover>th {
-background-color: #DDC390;
+  background-color: transparent;
 }
