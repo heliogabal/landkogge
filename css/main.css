@@ -1,0 +1,411 @@
+/*!
+ * Kalatheme (http://drupal.org/project/kalatheme)
+ */
+html {
+  font-size: 100.01%;
+}
+body {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-weight: 600 !important;
+  background: url(../img/021.jpg) no-repeat scroll center center #E5DDCB;
+}
+a, a:active, a.active, a:hover {
+  color: #720201;
+}
+b,strong {
+  font-weight: 700;
+}
+p {
+  margin: 0 0 1em;
+  /*padding-bottom: 50px;
+  background: url(../img/windrose.png) no-repeat bottom center;*/
+}
+ body, .navbar-default {
+  background: #E5DDCB; /*#EBB279;*/ /*#D7AA7C*/
+  /*background: url(../img/blurred-8.jpg) top center no-repeat;*/
+  border: 0;
+ }
+ #main {
+  /*background: #E5DDCB;*/
+  margin-top: -1em !important;
+  font-size: 1.5rem;
+ }
+.form-item-rooms-start-date label,
+.form-item-rooms-end-date label {
+  display: block;
+}
+.form-item-rooms-start-date-date label,
+.form-item-rooms-end-date-date label {
+  display: none;
+}
+.container-inline-date .date-padding {
+  float: none;
+  padding: 0;
+}
+#node-4 h2 {
+  display: none;
+}
+
+#rooms-wrapper tbody, #rooms-wrapper th {
+  border: 0;
+}
+#rooms-wrapper th {
+  padding-bottom: 5px;
+}
+#rooms-booking-availability-search-form .form-item{
+  margin-top: 0;
+}
+
+.page-unterkuenfte .group-left {
+  width: 25%;
+}
+.page-unterkuenfte .group-right {
+  width: 70%;
+}
+
+.view-unterkuenfte h2 {
+  margin-top: 0;
+}
+
+#rooms-booking-availability-search-form--2 #edit-actions,
+#rooms-booking-availability-search-form--2 .form-item-rooms,
+#rooms-booking-availability-search-form--2 .form-item-unit-type,
+#rooms-booking-availability-search-form #edit-actions,
+#rooms-booking-availability-search-form .form-item-rooms,
+#rooms-booking-availability-search-form .form-item-unit-type {
+  clear: none;
+}
+#rooms-booking-availability-search-form .description {
+  display: none;
+}
+#rooms-booking-availability-search-form .element-invisible {
+  position: absolute !important;
+  clip: auto;
+  overflow: visible;
+  height: 1px;
+}
+.header_address {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  font-style: italic;
+  font-size: .9em;
+}
+.header_phone {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  font-style: italic;
+  font-size: .9em;
+}
+
+#site-name-slogan a, ul.nav a {
+  font-weight: 700;
+  color: #5d5d5d;
+}
+.navbar-brand {
+  width: 100%;
+  margin: 0;
+  padding-bottom: 0;
+}
+.navbar-header {
+  width: 100%;
+}
+.navbar-nav {
+    margin: 0;
+    width: 100%;
+    padding-bottom: 1em;
+}
+#site-name-slogan {
+  background: #5d5d5d;
+    border-radius: 250px;
+    color: #FFFFFF;
+    font-size: 50px;
+    height: 200px;
+    line-height: 250px;
+    margin: -1.5em 0 0 -1em;
+    padding-bottom: 0;
+    text-align: center;
+    width: 200px;
+    position: relative;
+
+    /*position: absolute;
+    top: 170px;
+    left: -60px;
+    z-index: 10;*/
+    opacity: .9;
+}
+#site-name-slogan a {
+  color: #fff;
+  transform: rotate(-32deg);
+}
+.navbar-brand h1 {
+  color: #FFFFFF;
+    position: absolute;
+    top: 85px;
+    left: 20px;
+    width: 100px;
+}
+/*
+.front #site-name-slogan {
+    background: #5d5d5d;
+    border-radius: 250px;
+    color: #FFFFFF;
+    font-size: 50px;
+    height: 200px;
+    line-height: 250px;
+    margin: -1.5em 0 0 -1em;
+    padding-bottom: 0;
+    text-align: center;
+    width: 200px;
+    position: relative;
+
+    position: absolute;*/
+    /*top: 480px;*/
+    /*top: 330px;
+    right: 60px;
+    z-index: 10;
+    opacity: .9;
+}*/
+.front .navbar {
+  min-height: 0;
+}
+.front .navbar-nav {
+  padding-bottom: 0;
+}
+.front .navbar-brand h1 {
+  top: 80px;
+}
+a#logo {
+  display: none;
+  text-align: center;
+}
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+  margin-left: 0;
+}
+
+nav, #main, .container {
+  /*width: 960px !important;*/
+  max-width: 1200px !important;
+  margin: 0 auto;
+}
+/*#rooms-booking-availability-search-form #edit-submit {
+  margin: 1.85em;
+}*/
+.front .pane-rooms-booking-manager-rooms-availability-search {
+  padding: 0 1em;
+  text-align: center;
+}
+
+.front .frontpage {
+  /*background: #EEECE8;*/
+  padding: 3em;
+  margin: 0em 0 2em 0;
+  border: 1px solid #720201;
+  border-radius: 2px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: none;
+}
+.front .fp-search{
+  /*background: #EEECE8;*/
+  border: 1px solid #720201;
+  border-radius: 2px;
+  margin-bottom: 1em;
+}
+.front .fp-search label {
+  margin-bottom: 0;
+}
+.bryant-flipped {
+  /*background: #EEECE8;*/
+}
+.view-unterkuenfte .views-row {
+  padding: 1em;
+  margin-bottom: 1em;
+  border: 1px solid #720201;
+  border-radius: 2px;
+}
+.field-name-field-slider-fotos {
+  border: 1px solid #720201;
+  border-radius: 2px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.container {
+  position: relative;
+}
+nav li a {
+  font-size: 1.5em;
+  font-weight: 300;
+}
+.nav > li > a {
+    display: inline-block;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  border-radius: 2px;
+}
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus,
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+  background: #720201;
+}
+
+.btn-primary {
+    background-color: #3B7E00/*#F27405*/;
+    border-color: #3B7E00 /*#F3A108*/;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.8em;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active,
+.btn-primary.active, .open .dropdown-toggle.btn-primary {
+  background-color: #720201/*#F3A108*/;
+  border-color: #720201 /*#F3A108*/;
+}
+
+/* Button Startseite */
+.front .form-actions .btn, .front .form-submit{
+  margin: 2em 0 0 !important;
+}
+
+.front td select {
+  margin-top: -0.3em;
+}
+
+/* Button  Übersichtsseite */
+.page-unterkuenfte .btn-primary {
+   font-size: 1em;
+    font-weight: 700;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    margin-right: 5px;
+    padding: 0.3em 1em;
+}
+
+/* Node Ansicht */
+.node-type-unit-description .ds-2col-stacked-fluid {
+  border: 1px solid #720201;
+}
+.ueberblick .ds-2col-stacked-fluid > .group-left {
+    float: left;
+    width: 60%;
+}
+.ueberblick .ds-2col-stacked-fluid > .group-right {
+    float: right;
+    width: 35%;
+}
+.field-name-field-ausstattung .field-label,
+.node-type-unit-description h2.pane-title,
+.page-node-6 h2.pane-title {
+  padding: .3em .5em;
+  margin: 0 0 1em;
+  background: #5d5d5d;
+  color: #fff;
+  border-radius: 2px;
+}
+.page-node-6 ul {
+  padding-left: .7em;
+}
+.einzelansicht {
+  border: 1px solid #720201;
+}
+.bryant-flipped-sidebar-region p,
+.burr-flipped-sidebar-content p {
+  line-height: 1.2em;
+}
+/* FF bug flexslider margin */
+.einzelansicht .pane-node-unit-description-description {
+  padding: 2em 1em 1em;
+  z-index: -10;
+}
+.einzelansicht .pane-node-unit-description-image {
+  margin-bottom: 0;
+}
+.einzelansicht .pane-fpid-6,
+.field-name-body {
+  padding: 1em;
+}
+.field-name-field-unit-beschreibung {
+  padding: 3em 1em 1em;
+}
+.page-anfahrt .pane-bundle-map,
+.page-buchen .pane-bundle-text,
+.page-anfahrt .pane-bundle-text {
+  padding: 1em;
+}
+
+.field-name-field-ausstattung ul,
+.page-node-6 .pane-fpid-16 ul {
+  padding-left: 1em;
+}
+.field-name-field-ausstattung ul li,
+.page-node-6 .pane-fpid-16 ul li {
+  line-height: 1.2;
+  padding: 0 0 .5em 0;
+  margin-left: .5em;
+  list-style: none;
+}
+.field-name-field-ausstattung ul li:before,
+.page-node-6 .pane-fpid-16 ul li:before{
+  font-family: "FontAwesome";
+  content:"\f00c";
+  margin-left:-1.5em;
+  margin-right: .5em;
+  color: #720201;
+}
+.field-name-field-ausstattung, .pane-rooms-booking-manager-rooms-availability-search {
+  padding: 0;
+}
+#rooms-booking-availability-search-form .form-item {
+  display: inline-block;
+}
+.container-inline-date .form-item, .container-inline-date .form-item input {
+  max-width: 185px;
+}
+
+/* Booking Page */
+.page-booking .form-item,
+.page-booking .form-actions {
+  margin: 0;
+  display: inline-block;
+}
+
+/* Datepicker jquery UI */
+#ui-datepicker-div {
+    background: #EBE9E6;
+}
+.ui-datepicker .ui-datepicker-header {
+  background: #5d5d5d;
+}
+/*.ui-datepicker-week-end {
+  background: #DDC390;
+}*/
+
+/* Kontakt */
+.page-node-3 .einzelansicht {
+  padding: 1em;
+}
+
+/* Adresszeile / Footer */
+.impressum {
+  font-size: 1.2rem;
+  margin: 1em 0;
+}
+
+/* Tabellen */
+.table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {
+background-color: #EBE9E6;
+}
+.table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
+border: 1px solid #ddd;
+}
+.table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
+  border: none;
+}
+.table-hover>tbody>tr:hover>td, .table-hover>tbody>tr:hover>th {
+background-color: #DDC390;
+}
