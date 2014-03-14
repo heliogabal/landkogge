@@ -1,6 +1,7 @@
 /*!
  * Kalatheme (http://drupal.org/project/kalatheme)
  */
+
 html {
   font-size: 100.01%;
 }
@@ -228,6 +229,7 @@ nav, #main, .container {
   margin-bottom: 1em;
   border: 1px solid #720201;
   border-radius: 2px;
+  min-height: 460px;
 }
 .field-name-field-slider-fotos {
   border: 1px solid #720201;
@@ -454,4 +456,56 @@ background-color: transparent;
 }
 .table-hover>tbody>tr:hover>td, .table-hover>tbody>tr:hover>th {
   background-color: transparent;
+}
+
+/* Modale Buchungsanfrage */
+div.ctools-modal-content .modal-content {
+  padding: 1em 0 0 2em;
+  border: 0;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -wk-box-shadow: none;
+  box-shadow: none;
+}
+div.modal-forms-modal-content .popups-close {
+  margin-top: 15px;
+}
+.form-email {
+  background-color: #FFFFFF;
+    background-image: none;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555555;
+    display: block;
+    font-size: 14px;
+    height: 34px;
+    line-height: 1.42857;
+    padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+
+.form-control:focus, .form-email:focus {
+  border-color: #720201;
+  box-shadow: 0 1px 1px rgba(114, 2, 1, 0.4) inset, 0 0 8px rgba(114, 2, 1, 0.6);
+  outline: 0 none;
+}
+.page-buchen .view-buchungsanfrage {
+  padding: 0 1em;
+}
+@media (max-width: 800px) {
+/* Kompaktes Layout */
+  .ueberblick .ds-2col-stacked-fluid>.group-left{
+    width: 100%;
+  }
+  .ueberblick .ds-2col-stacked-fluid>.group-right{
+    width: 100%;
+    margin-top: 2em;
+  }
+}
+@media (max-width: 1045px) {
+/* Kompaktes Layout */
+  #site-name-slogan {
+    margin: -1.7em 0 0 0;
+  }
 }
