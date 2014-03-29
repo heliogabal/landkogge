@@ -45,14 +45,14 @@
 <html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"
 <?php print $rdf_namespaces; ?>>
 
-<head profile="<?php print $grddl_profile; ?>">
+<head>
   <?php print $head; ?>
     <!-- %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"} -->
     <meta content='width=device-width, initial-scale=1' name='viewport' />
     <!--[if lt IE 9]>
       <script src='http://html5shim.googlecode.com/svn/trunk/html5.js'></script>
     <![endif]-->
-    <meta http-equiv="cleartype" content="on" />
+    <!--<meta http-equiv="cleartype" content="on" />-->
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>

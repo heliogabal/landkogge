@@ -2,6 +2,11 @@
  * Kalatheme (http://drupal.org/project/kalatheme)
  */
 
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
 html {
   font-size: 100.01%;
 }
@@ -9,7 +14,7 @@ body {
   font-size: 1.1rem;
   line-height: 1.6;
   font-weight: 600 !important;
-  color: #000;
+  color: #42332D;
   background: #E5DDCB;
 }
 a, a:active, a.active, a:hover {
@@ -23,10 +28,23 @@ p {
   /*padding-bottom: 50px;
   background: url(../img/windrose.png) no-repeat bottom center;*/
 }
- body, .navbar-default {
-  /*background: #E5DDCB; #EBB279;*/ /*#D7AA7C*/
+#tabs {
+  margin-bottom: 0;
+}
+#tabs ul{
+  margin-bottom: 20px;
+}
+.navbar-default {
+  background: transparent; /*#EBB279*/ /*#D7AA7C*/
   /*background: url(../img/blurred-8.jpg) top center no-repeat;*/
   border: 0;
+ }
+ .navbar-default nav {
+  float: left;
+ }
+ .container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
+    margin-left: -15px;
+    margin-right: -15px;
  }
  #main-wrapper {
   margin-top: 0;
@@ -41,10 +59,26 @@ p {
  .border {
   border: 1px solid #42332D;
   margin-bottom: 1em;
-  background: rgba(229,221,203,.6);
+  background: rgba(229,221,203,1);
+  -ms-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+ }
+ .border .moscone-flipped-content {
+  padding: 1em;
+ }
+ .node-type-unit-description .border {
+  border-top: 0;
+ }
+ .node-type-unit-description .einzelansicht {
+  border-top: 1px solid #42332D;
  }
  .border .moscone-flipped-sidebar {
-  margin-top: 7em;
+  margin-top: 2em;
+ }
+ .node-type-unit-description .moscone-flipped-content {
+  padding: 0;
  }
 .form-item-rooms-start-date label,
 .form-item-rooms-end-date label {
@@ -115,12 +149,15 @@ p {
   font-size: .9em;
 }
 
-#site-name-slogan a, ul.nav a {
+ul.nav a {
   font-weight: 700;
-  color: #5d5d5d;
+  color: #42332D;
 }
 ul.nav a {
-  font-variant: small-caps;
+  /*font-variant: small-caps;*/
+}
+.navbar {
+  margin-bottom: 0;
 }
 .navbar-brand {
   width: 100%;
@@ -133,7 +170,14 @@ ul.nav a {
 .navbar-nav {
     margin: 0;
     width: 100%;
-    padding: 1em 15px;
+    padding: 1em 0;
+}
+.navbar-toggle {
+  border-color: #42332D;
+  margin-right: 0;
+}
+.navbar-toggle .icon-bar {
+  background: #42332D;
 }
 a#logo {
   float: right;
@@ -142,6 +186,10 @@ a#logo {
   margin-top: -17%;
   z-index: 1000;
   display: block;
+}
+.node-type-unit-description a#logo {
+  background: #E5DDCB;
+  padding-bottom: 2em;
 }
 a#logo img {
   width: 100px;
@@ -157,7 +205,7 @@ a#logo img {
   margin-left: 0;
 }
 
-nav, #main, .container {
+.container {
   max-width: 1200px !important;
   margin: 0 auto;
 }
@@ -180,6 +228,7 @@ nav, #main, .container {
 }
 .frontpage {
   margin: 0;
+  padding-bottom: 1em;
   /*border: 1px solid #42332D;
   border-radius: 2px;
   border-top-left-radius: 0;
@@ -203,12 +252,22 @@ nav, #main, .container {
 }*/
 .view-unterkuenfte .views-row.views-row-1.views-row-first,
 .page-node-6 .einzelansicht,
-.page-node-8 .einzelansicht,
+.page-node-9 .einzelansicht,
 .page-anfahrt .einzelansicht,
 .page-node-3 .einzelansicht {
     border-top: 0 none;
     padding-top: 1em;
 }
+.page-node-6 .einzelansicht,
+.page-node-9 .moscone-flipped-content {
+  margin-top: -4.5em;
+}
+.page-anfahrt .pane-title:first-of-type,
+.page-node-3 .pane-title:first-of-type {
+  display: inline-block;
+  width: 70%;
+}
+
 .moscone-flipped-sidebar-area {
     margin-top: 1em;
 }
@@ -243,23 +302,47 @@ nav, #main, .container {
   position: relative;
   width: 98%;
 }
+header .container {
+  padding: 0;
+}
 nav li a {
-  font-size: 1.4em;
+  font-size: 1.3em;
   font-weight: 300;
 }
 .nav > li > a {
     display: inline-block;
     line-height: 1;
+    padding: .5em 0;
+    margin: 0 .5em;
+    border-radius: 0;
+    border-bottom: 3px solid transparent;
 }
 
 .nav > li > a:hover,
-.nav > li > a:focus {
-  border-radius: 2px;
+.nav > li > a:focus,
+.nav > li > a:active {
+  /*border-radius: 2px;
+  background: rgba(229,221,203,.6);*/
+  border-bottom: 3px solid #42332D;
+  background: transparent;
+}
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+  background: transparent;
+  border-color: #42332D;
+  border-bottom: 3px solid transparent;
+}
+
+nav li a.active {
+  /*background: rgba(229,221,203,.6);*/
+  border-bottom: 3px solid #42332D;
 }
 
 .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus,
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
-  background: #720201;
+  /*background: #720201;*/
+  background: none;
+  color: #42332D;
 }
 
 .btn-primary {
@@ -335,7 +418,7 @@ nav li a {
   border-top: 1px solid #42332D;
   border-bottom: 1px solid #42332D;
   line-height: 1;
-  font-variant: small-caps;
+  /*font-variant: small-caps;*/
   text-align: center;
   position: relative;
   clear: both;
@@ -345,7 +428,9 @@ nav li a {
 .einzelansicht h2.pane-title:first-of-type,
 .einzelansicht h2.pane-title:first-of-type:before,
 .ueberblick h2:first-of-type,
-.ueberblick h2:first-of-type:before {
+.ueberblick h2:first-of-type:before,
+.moscone-flipped-content h2.pane-title:first-of-type,
+.moscone-flipped-content h2.pane-title:first-of-type:before {
   border-top: 0;
 }
 .node-type-unit-description .einzelansicht h2.pane-title:first-of-type {
@@ -388,9 +473,13 @@ nav li a {
 .einzelansicht .pane-node-unit-description-image {
   margin-bottom: 0;
 }
-.einzelansicht .pane-fpid-6,
+/*.einzelansicht .pane-fpid-6,
 .field-name-body {
   padding: 1em;
+}*/
+/* Karte */
+.node-10 .field-name-body {
+  padding: 0;
 }
 .field-name-field-unit-beschreibung {
   padding: 3em 1em 1em;
@@ -485,14 +574,19 @@ nav li a {
   background: #DDC390;
 }*/
 
-/* Kontakt */
+/* Anfahrt */
+.node-10 {
+  margin-top: -1em !important;
+  margin-left: -15px !important;
+  overflow-x: hidden;
+}
 iframe {
-    margin-left: -1.6em;
-    margin-top: -2em;
-    width: 107.4%;
+    width: 110%;
     height: 380px;
     border-bottom: 1px solid #42332D;
 }
+
+/* Kontakt */
 .page-node-3 .einzelansicht {
   padding: 0;
 }
@@ -544,7 +638,7 @@ background-color: transparent;
 }
 
 /* Modale Buchungsanfrage */
-div.ctools-modal-content .modal-content {
+.node-type-unit-description div.ctools-modal-content .modal-content {
   padding: 1em 0 0 2em;
   border: 0;
   -moz-box-shadow: none;
@@ -552,7 +646,7 @@ div.ctools-modal-content .modal-content {
   -wk-box-shadow: none;
   box-shadow: none;
 }
-div.modal-forms-modal-content .popups-close {
+.node-type-unit-description div.modal-forms-modal-content .popups-close {
   margin-top: 15px;
 }
 .form-email {
@@ -587,8 +681,8 @@ div.modal-header {
   background: #EBE9E6 !important;
 }
 
-.popups-container,
-div.ctools-modal-content .modal-content {
+.node-type-unit-description .popups-container,
+.node-type-unit-description div.ctools-modal-content .modal-content {
   background: #E5DDCB !important;
 }
 
@@ -603,6 +697,9 @@ div.ctools-modal-content .modal-content {
 div#panels-ipe-control-container {
   background: transparent;
   box-shadow: none;
+}
+.panels-ipe-editing a#logo {
+  margin:0 !important;
 }
 @media (min-width: 580px) {
     /*#modalContent {
@@ -632,8 +729,12 @@ div#panels-ipe-control-container {
 @media (min-width: 800px) {
 /* Kompaktes Layout */
   body {
-    background: url(../img/bg2.jpg) repeat scroll top left #E5DDCB;
+    background: #B7CEE9;
+    /*background: url(../img/clouds.png) repeat scroll top left #B7CEE9;*/
     font-size: 1.2rem;
+  }
+  .navbar {
+    margin-bottom: 20px;
   }
   a#logo img {
     width: 250px;
@@ -653,6 +754,7 @@ div#panels-ipe-control-container {
 /* breites Layout */
   body{
     background-attachment: fixed;
+    font-size: 1.4rem;
   }
   .front .frontpage {
     padding: 3em;
