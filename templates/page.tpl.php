@@ -85,50 +85,6 @@
 <div id="page-wrapper"><div id="page">
 
    <!-- Page Header -->
-  <header class="navbar navbar-default <?php if ($hide_site_name && $hide_site_slogan && !$logo && !$main_menu && !$secondary_menu) { print ' element-invisible'; } ?>">
-    <div class="container">
-      <div class="navbar-header">
-        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <!--<div class="header_address">
-          <p>Poggenhof 7, 18569 Schaprode OT Poggenhof</p>
-        </div>-->
-        <?php if ($logo): ?>
-          <div class='brand navbar-brand'>
-            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-              <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-            </a>
-          </div>
-        <?php endif; ?>
-
-        <?php if ($site_name || $site_slogan): ?>
-          <div id="site-name-slogan" class="brand navbar-brand <?php if ($hide_site_name && $hide_site_slogan) { print ' element-invisible'; } ?>">
-
-            <?php if ($site_name): ?>
-              <h1 id="site-name"<?php if ($hide_site_name) { print ' class="element-invisible"'; } ?>>
-                <strong>
-                  <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-                </strong>
-              </h1>
-            <?php endif; ?>
-
-            <?php if ($site_slogan): ?>
-              <div id="site-slogan" <?php if ($hide_site_slogan) { print 'class="element-invisible"'; } ?>>
-                <?php print $site_slogan; ?>
-              </div>
-            <?php endif; ?>
-          </div> <!-- /#name-and-slogan -->
-        <?php endif; ?>
-        <!--<div class="header_phone">
-              <p>Tel.: +49 173 3649 386 info@landkogge.de</p>
-            </div>-->
-      </div><!-- /.navbar-header -->
-    </div>
-  </header>
 <nav class="collapse navbar-collapse <?php if (!$main_menu && !$secondary_menu) { print 'element-invisible'; } ?>" role="navigation">
         <?php
           $pri_attributes = array(
@@ -187,7 +143,9 @@
     <div id="content" class="column <?php $no_panels ? print 'container' : ''; ?>">
       <?php print render($page['content']); ?>
     </div> <!-- /.section, /#content -->
-
+      <div id="foot">
+        <?php print render($page['foot']); ?>
+      <div><!-- /#footer-->
   </div></div> <!-- /#main, /#main-wrapper -->
 
 </div></div> <!-- /#page, /#page-wrapper -->

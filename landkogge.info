@@ -4,12 +4,13 @@ base theme = kalatheme
 core = 7.x
 
 regions[content] = Content
+regions[foot] = Footer
 
 settings[toggle_logo] = 0
 
 stylesheets[all][] = css/main.css
-
 stylesheets[all][] = css/flexslider.css
-
 stylesheets[all][] = css/font-awesome.min.css
 
+; Panels layouts. You can place multiple layouts under the "layouts" folder.
+plugins[panels][layouts] = layouts
