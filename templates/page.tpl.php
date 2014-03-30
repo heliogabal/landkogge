@@ -85,7 +85,7 @@
 <div id="page-wrapper"><div id="page">
 
    <!-- Page Header -->
-     <header class="navbar <?php if ($hide_site_name && $hide_site_slogan && !$logo && !$main_menu && !$secondary_menu) { print ' element-invisible'; } ?>">
+  <header class="navbar <?php if ($hide_site_name && $hide_site_slogan && !$logo && !$main_menu && !$secondary_menu) { print ' element-invisible'; } ?>">
     <div class="container">
       <div class="navbar-header">
         <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
@@ -126,7 +126,7 @@
     </div>
   </header>
   <!-- Page Main -->
-  <div id="main-wrapper container" class="clearfix"><div id="main" class="clearfix">
+  <div id="main-wrapper" class="clearfix"><div id="main" class="clearfix">
     <div id="top-content" class="column container">
       <a id="main-content"></a>
       <?php if (($no_panels || $always_show_page_title) && $title): ?>
@@ -154,8 +154,10 @@
       <?php endif; ?>
     </div> <!-- /.section, /#top-content -->
 
-    <div id="content" class="column <?php $no_panels ? print 'container' : ''; ?>">
-      <?php print render($page['content']); ?>
+    <div id="content" class="column container<?php //$no_panels ? print 'container' : ''; ?>">
+      <div class="border">
+        <?php print render($page['content']); ?>
+      </div> <!-- /.border -->
     </div> <!-- /.section, /#content -->
     <div id="foot">
       <?php print render($page['foot']); ?>

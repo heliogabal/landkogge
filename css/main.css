@@ -7,15 +7,21 @@
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
  }
 
+ /* Deaktiviere Edit Tabs für Hotelier Rolle */
+ .role-hotelier #tabs {
+  display: none;
+ }
+
 html {
   font-size: 100.01%;
 }
 body {
   font-size: 1.1rem;
-  line-height: 1.6;
+  line-height: 1.618;
   font-weight: 600 !important;
   color: #42332D;
-  background: #E5DDCB;
+   background: #E5DDCB;
+  /*background: #B7CEE9;*/
 }
 a, a:active, a.active, a:hover {
   color: #720201;
@@ -28,6 +34,25 @@ p {
   /*padding-bottom: 50px;
   background: url(../img/windrose.png) no-repeat bottom center;*/
 }
+.initial p:first-of-type:first-letter {
+    float: left;
+    font-size: 3em;
+    line-height: .9em;
+    padding: 10px 12px 0 0;
+}
+  .mobil {
+    display: block;
+    background: none repeat scroll 0 0 #3B7E00;
+    border-radius: 2px;
+    color: #FFFFFF;
+    font-weight: 700;
+    padding: 0.3em 1em;
+    text-align: center;
+    text-decoration: none;
+  }
+  .desktop {
+    display: none !important;
+  }
 #tabs {
   margin-bottom: 0;
 }
@@ -69,13 +94,14 @@ p {
   padding: 1em;
  }
  .node-type-unit-description .border {
-  border-top: 0;
+  /*border-top: 0;*/
  }
  .node-type-unit-description .einzelansicht {
-  border-top: 1px solid #42332D;
+  /*border-top: 1px solid #42332D;*/
  }
  .border .moscone-flipped-sidebar {
   margin-top: 2em;
+  padding: 0 1em 1em;
  }
  .node-type-unit-description .moscone-flipped-content {
   padding: 0;
@@ -174,6 +200,7 @@ ul.nav a {
 }
 .navbar-toggle {
   border-color: #42332D;
+  background: #E5DDCB;
   margin-right: 0;
 }
 .navbar-toggle .icon-bar {
@@ -188,8 +215,13 @@ a#logo {
   display: block;
 }
 .node-type-unit-description a#logo {
-  background: #E5DDCB;
-  padding-bottom: 2em;
+    padding-bottom: 2em;
+    margin: 0;
+  }
+@media (min-width: 801px) {
+  .node-type-unit-description a#logo {
+    margin: 0 .5em 0 0;
+  }
 }
 a#logo img {
   width: 100px;
@@ -363,9 +395,9 @@ nav li a.active {
 }
 
 /* Button Startseite */
-.front .form-actions .btn, .front .form-submit{
+/*.front .form-actions .btn, .front .form-submit{
   margin: 2em 0 0 !important;
-}
+}*/
 
 .front td select {
   margin-top: -0.3em;
@@ -560,8 +592,8 @@ nav li a.active {
   clear: both;
   border-bottom: 1px solid #42332D;
 }
-.webform-component-date {
-
+.webform-component-date .form-item {
+  margin-top: 0;
 }
 /* Datepicker jquery UI */
 #ui-datepicker-div {
@@ -645,6 +677,7 @@ background-color: transparent;
   -ms-box-shadow: none;
   -wk-box-shadow: none;
   box-shadow: none;
+  overflow-x: hidden;
 }
 .node-type-unit-description div.modal-forms-modal-content .popups-close {
   margin-top: 15px;
@@ -668,13 +701,13 @@ background-color: transparent;
   display: inline-block !important;
 }
 .webform-component-date input {
-  margin-top: 1.5em;
+  margin-top: .5em;
 }
 #webform-component-personenzahl input {
-  margin-top: 1.8em;
+  /*margin-top: 1.8em;*/
 }
 .form-textarea-wrapper textarea {
-  max-width: 900px;
+  max-width: 880px;
 }
 
 div.modal-header {
@@ -694,23 +727,36 @@ div.modal-header {
 .page-buchen .view-buchungsanfrage {
   padding: 0 1em;
 }
-div#panels-ipe-control-container {
+/*div#panels-ipe-control-container {
   background: transparent;
   box-shadow: none;
-}
+}*/
 .panels-ipe-editing a#logo {
   margin:0 !important;
 }
-@media (min-width: 580px) {
+.panels-ipe-editing .panels-ipe-portlet-wrapper {
+  background: #E5DDCB;
+}
+@media (max-width: 480px) {
+  .node-type-unit-description a#logo {
+    position: absolute;
+    right: -.6em;
+    top: 5em;
+  }
+}
+@media (max-width: 580px) {
     /*#modalContent {
       position: fixed !important;
       top: 0% !important;
       bottom: 0% !important;
       right: 0% !important;
       left: 0% !important;
-      height: 100% !important;
+      height: auto !important;
       z-index: 9999 !important;
       overflow: auto !important;
+    }
+    .ctools-modal-dialog {
+      height: auto !important;
     }
     div.ctools-modal-content {
       width: 100% !important;
@@ -718,10 +764,14 @@ div#panels-ipe-control-container {
     }
     div.ctools-modal-content .modal-content {
       width: 100% !important;
-    }*/
+      overflow: scroll;
+    }
+    #modal-content {
+      height: auto !important;
+    }
     a#logo img {
     width: 220px;
-  }
+  }*/
   .container {
     width: 95%;
   }
@@ -729,9 +779,15 @@ div#panels-ipe-control-container {
 @media (min-width: 800px) {
 /* Kompaktes Layout */
   body {
-    background: #B7CEE9;
+    /*background: #B7CEE9;*/
     /*background: url(../img/clouds.png) repeat scroll top left #B7CEE9;*/
     font-size: 1.2rem;
+  }
+  .mobil {
+    display: none;
+  }
+  .desktop {
+    display: block !important;
   }
   .navbar {
     margin-bottom: 20px;

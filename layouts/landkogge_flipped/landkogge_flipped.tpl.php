@@ -12,8 +12,8 @@
 
 <div class="panel-display moscone-flipped clearfix <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
   <section class="section">
-    <div class="container">
-      <div class="border">
+    <!--<div class="container">
+      <div class="border">-->
         <div class="moscone-container moscone-header clearfix panel-panel row-fluid">
           <div class="moscone-container-inner moscone-header-inner panel-panel-inner span12">
             <?php print $content['header']; ?>
@@ -32,12 +32,12 @@
             </div>
           </div>
         </div>
-      </div>
+      <!--</div>-->
         <div class="moscone-container moscone-header clearfix panel-panel row-fluid">
           <div class="moscone-container-inner moscone-header-inner panel-panel-inner span12">
             <?php print $content['footer']; ?>
           </div>
         </div>
-      </div>
-    </div>
+      <!--</div>-->
+    </section>
 </div><!-- /.moscone-flipped -->
