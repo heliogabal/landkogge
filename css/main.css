@@ -14,31 +14,53 @@
 
 html {
   font-size: 100.01%;
+  background: #42332D;
+  /*background: url(../img/clouds.png) left 5em repeat-x,url(../img/stock-vector-lighthouse-detailed-vector-44245555.jpg) bottom right no-repeat #B7CEE9;*/
+  background: url(../img/clouds.png) scroll left 5em repeat-x #B7CEE9;
+  background-size: 450px;
 }
 body {
   font-size: 1.1rem;
   line-height: 1.618;
-  font-weight: 600 !important;
+  /*font-weight: 600 !important;*/
   color: #42332D;
-   background: #E5DDCB;
-  /*background: #B7CEE9;*/
+  background: url(../img/leuchtturm.png) scroll no-repeat;
+  background: url(../img/leuchtturm.svg) scroll no-repeat;
+  background-size: 33%;
+  background-position: -2em bottom;
+  padding-bottom: 50px;
+  z-index: 2;
+  /* background: #E5DDCB;
+  background: #B7CEE9;*/
+  /*background: url(../img/tree_bg_bottom.png) fixed no-repeat bottom center;
+  margin: 3em 13em 8em 13em;*/
+}
+#content {
+  background: #E5DDCB;
+  padding: .5em;
+  border-radius: 2px;
+}
+#foot {
+    margin: 2em 0 4em;
 }
 a, a:active, a.active, a:hover {
   color: #720201;
+  font-weight: 600;
 }
 b,strong {
-  font-weight: 700;
+  font-weight: 600;
 }
 p {
   margin: 0 0 1em;
   /*padding-bottom: 50px;
   background: url(../img/windrose.png) no-repeat bottom center;*/
 }
-.initial p:first-of-type:first-letter {
-    float: left;
-    font-size: 3em;
-    line-height: .9em;
-    padding: 10px 12px 0 0;
+ul {
+  padding-left: 0;
+}
+.field-name-body ul {
+  padding-left: 1em;
+  margin-bottom: 1em;
 }
   .mobil {
     display: block;
@@ -72,7 +94,7 @@ p {
     margin-right: -15px;
  }
  #main-wrapper {
-  margin-top: 0;
+  margin: 0;
  }
  #main {
   /*background: #E5DDCB;
@@ -83,18 +105,48 @@ p {
  /* Landkogge Border Style*/
  .border {
   border: 1px solid #42332D;
-  margin-bottom: 1em;
+  /*-ms-word-break: break-all;
+     word-break: break-all;*/
+
+     /* Non standard for webkit */
+     word-break: break-word;
+
+-webkit-hyphens: auto;
+   -moz-hyphens: auto;
+    -ms-hyphens: auto;
+        hyphens: auto;
+
   background: rgba(229,221,203,1);
   -ms-border-radius: 2px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
+  position: relative;
+  /*margin: 0;
+  padding: 5px;*/
  }
+
+/*.border:before {
+    border: 3px solid #42332D;
+    border-radius: 2px;
+    bottom: 3px;
+    content: "";
+    display: block;
+    left: 3px;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    pointer-events: none;
+    -ms-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}*/
  .border .moscone-flipped-content {
   padding: 1em;
  }
- .node-type-unit-description .border {
-  /*border-top: 0;*/
+ .node-type-unit-description h2:first-of-type {
+  margin-top: 80px;
  }
  .node-type-unit-description .einzelansicht {
   /*border-top: 1px solid #42332D;*/
@@ -102,6 +154,7 @@ p {
  .border .moscone-flipped-sidebar {
   margin-top: 2em;
   padding: 0 1em 1em;
+  /*background: url("../img/rose.jpg") no-repeat scroll left bottom rgba(0, 0, 0, 0);*/
  }
  .node-type-unit-description .moscone-flipped-content {
   padding: 0;
@@ -176,7 +229,7 @@ p {
 }
 
 ul.nav a {
-  font-weight: 700;
+  font-weight: 400;
   color: #42332D;
 }
 ul.nav a {
@@ -290,12 +343,10 @@ a#logo img {
     border-top: 0 none;
     padding-top: 1em;
 }
-.page-node-6 .einzelansicht,
-.page-node-9 .moscone-flipped-content {
-  margin-top: -4.5em;
-}
+
 .page-anfahrt .pane-title:first-of-type,
-.page-node-3 .pane-title:first-of-type {
+.page-node-3 .pane-title:first-of-type,
+.page-node-11 .pane-title:first-of-type {
   display: inline-block;
   width: 70%;
 }
@@ -322,6 +373,11 @@ a#logo img {
   padding-left: 0;
   border: 0;
 }
+.page-unterkunft h2 a {
+    font-family: 'Lobster Two';
+    font-weight: normal;
+}
+
 .page-unterkunft h2:before {
   border: 0;
 }
@@ -332,7 +388,7 @@ a#logo img {
 }
 .container {
   position: relative;
-  width: 98%;
+  width: 90%;
 }
 header .container {
   padding: 0;
@@ -345,7 +401,7 @@ nav li a {
     display: inline-block;
     line-height: 1;
     padding: .5em 0;
-    margin: 0 .5em;
+    margin: 0 .1em 0 .5em;
     border-radius: 0;
     border-bottom: 3px solid transparent;
 }
@@ -375,6 +431,10 @@ nav li a.active {
   /*background: #720201;*/
   background: none;
   color: #42332D;
+  border: 0;
+}
+.nav-pills > li {
+  width: 45%;
 }
 
 .btn-primary {
@@ -445,7 +505,6 @@ nav li a.active {
 .node-type-unit-description .einzelansicht h2.pane-title {
   padding: .3em .5em;
   margin: 0 0 1em;
-  color: #000;
   border-radius: 0px;
   border-top: 1px solid #42332D;
   border-bottom: 1px solid #42332D;
@@ -493,6 +552,9 @@ nav li a.active {
   /*border: 1px solid #42332D;*/
   margin-bottom: 1em;
 }
+.padding {
+  padding: 1em;
+}
 .bryant-flipped-sidebar-region p,
 .burr-flipped-sidebar-content p {
   line-height: 1.2em;
@@ -502,8 +564,12 @@ nav li a.active {
   padding: 2em 1em 1em;
   z-index: -10;
 }
+/*.einzelansicht .pane-node-unit-description-image {
+  margin: -80px 0 80px;
+}*/
 .einzelansicht .pane-node-unit-description-image {
-  margin-bottom: 0;
+    padding: 0 0 4em;
+    position: relative;
 }
 /*.einzelansicht .pane-fpid-6,
 .field-name-body {
@@ -514,7 +580,7 @@ nav li a.active {
   padding: 0;
 }
 .field-name-field-unit-beschreibung {
-  padding: 3em 1em 1em;
+  padding: 0 1em 1em;
 }
 .page-anfahrt .pane-bundle-map,
 .page-buchen .pane-bundle-text,
@@ -533,18 +599,20 @@ nav li a.active {
 }
 .field-name-field-ausstattung ul li,
 .page-node-6 .pane-fpid-16 ul li,
-.page-node-8 .pane-fpid-17 ul li {
+.page-node-8 .pane-fpid-17 ul li,
+.page-node-9 .pane-fpid-21 ul li {
   line-height: 1.2;
   /*padding: 0 0 .5em 0;
   margin-left: .5em;*/
   list-style: none;
   border-bottom: 1px solid #42332D;
   margin-bottom: .5em;
-  padding-bottom: .2em;
+  padding-bottom: .5em;
 }
 .field-name-field-ausstattung ul li:last-child,
 .page-node-6 .pane-fpid-16 ul li:last-child,
-.page-node-8 .pane-fpid-17 ul li:last-child {
+.page-node-8 .pane-fpid-17 ul li:last-child,
+.page-node-9 .pane-fpid-21 ul li:last-child {
   border: 0;
 }
 /*.field-name-field-ausstattung ul li:before,
@@ -737,6 +805,10 @@ div.modal-header {
 .panels-ipe-editing .panels-ipe-portlet-wrapper {
   background: #E5DDCB;
 }
+.leaflet-right {
+	left: 0 !important;
+	right: auto !important;
+}
 @media (max-width: 480px) {
   .node-type-unit-description a#logo {
     position: absolute;
@@ -773,7 +845,12 @@ div.modal-header {
     width: 220px;
   }*/
   .container {
-    width: 95%;
+    width: 90%;
+  }
+}
+@media (min-width: 768px) {
+  .nav-pills > li {
+    width: auto;
   }
 }
 @media (min-width: 800px) {
@@ -808,9 +885,15 @@ div.modal-header {
 }
 @media (min-width: 1024px) {
 /* breites Layout */
-  body{
+  html {
     background-attachment: fixed;
-    font-size: 1.4rem;
+    background-position: left 9em;
+  }
+  body{
+    background-size: 20%;
+    background-attachment: fixed;
+    background-position: -1em bottom;
+    font-size: 1.3rem;
   }
   .front .frontpage {
     padding: 3em;
@@ -818,9 +901,24 @@ div.modal-header {
   a#logo img{
     width: 280px;
   }
+  /*.einzelansicht .pane-node-unit-description-image {
+  margin: -80px 0 80px;
+  }*/
 }
 @media (min-width: 1280px) {
+  .container {
+    width: 80%;
+  }
+  body{
+    background-size: 15%;
+    background-position: left bottom;
+    font-size: 1.4rem;
+  }
   a#logo img {
     width: 310px;
+  }
+  .page-node-6 .einzelansicht,
+  .page-node-9 .moscone-flipped-content {
+    margin-top: -4.5em;
   }
 }
